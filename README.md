@@ -21,10 +21,40 @@ emdash({
 });
 ```
 
+## Githubから直接src/plugins/に入れて使用する場合
+
+1. `src/plugins/emdash-plugin-admin-ja` にリポジトリをクローンします。
+
+```bash
+cd src/plugins
+git clone https://github.com/mammosu/emdash-plugin-admin-ja.git
+```
+2. `astro.config.mjs` でプラグインをインポートして使用します。
+
+```ts
+import { adminJapanesePlugin } from "./src/plugins/emdash-admin-ja/index";
+
+export default defineConfig({
+  ...,
+  integrations: [
+    react(),
+    emdash({
+      ...,
+      plugins: [
+        ...,
+        adminJapanesePlugin()
+      ],
+      ...
+    }),
+  ],
+  ...,
+});
+```
+
 ## Optional debug mode (development only)
 
 未翻訳候補の収集ログを有効化:
-DevTools Console に未翻訳候補のログを出力します。
+envファイルに `PUBLIC_EMDASH_ADMIN_JA_DEBUG=1` を設定すると、DevTools Console に未翻訳候補のログを出力します。
 
 ```env
 PUBLIC_EMDASH_ADMIN_JA_DEBUG=1
