@@ -1,4 +1,4 @@
-# @mammosu/emdash-plugin-admin-ja
+# EmDash管理画面日本語化プラグイン
 
 EmDash 管理画面の英語UI文言を日本語に置き換えるローカル向けプラグインです。
 
