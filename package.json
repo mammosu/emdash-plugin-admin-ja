@@ -1,0 +1,25 @@
+{
+  "name": "@mammosu/emdash-plugin-admin-ja",
+  "version": "0.1.0",
+  "description": "Japanese localization helper plugin for EmDash admin UI",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./admin": "./src/admin.ts",
+    "./plugin": "./src/plugin.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "emdash",
+    "cms",
+    "plugin",
+    "japanese",
+    "i18n"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "emdash": "^0.1.0"
+  }
+}
